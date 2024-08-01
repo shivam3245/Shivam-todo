@@ -26,10 +26,6 @@ function App() {
   const toggleFinished = (e) => {
     setshowFinished(!showFinished)
   }
-
-
-
-
   const handleEdit = (e, id) => {
     let t = todos.filter(i => i.id === id)
     setTodo(t[0].todo)

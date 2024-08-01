@@ -18,7 +18,6 @@ function App() {
     }
   }, [])
 
-
   const saveToLS = (params) => {
     localStorage.setItem("todos", JSON.stringify(todos))
   }
@@ -65,7 +64,6 @@ function App() {
     saveToLS()
   }
 
-
   return (
     < >
       <Navbar />
@@ -79,7 +77,7 @@ function App() {
         <input className='my-4' onChange={toggleFinished} type="checkbox" checked={showFinished} /> Show Finished
         <h2 className='text-lg font-bold'>Your Todos</h2>
         <div className="todos">
-          {todos.length === 0 && <div className='m-5'>No Todos to display</div>}
+          {todos.length === 0 && <div className='m-5'>Empty Todos</div>}
           {todos.map(item => {
 
             return (showFinished || !item.isCompleted) && <div key={item.id} className={"todo flex md:w-1/2 my-3 justify-between"}>
